@@ -1,0 +1,7 @@
+{
+  "name": "Vision AI",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
