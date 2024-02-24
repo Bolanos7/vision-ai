@@ -7,7 +7,7 @@ import { useHistory } from "react-router-dom";
 
 import "./Terms.css";
 import PreTest from "../components/PreTest";
-import "./Home.css";
+import "../styles/home/home.css";
 import "./CameraPage.css";
 import "../components//PreTest.css";
 
@@ -15,7 +15,7 @@ import Header from "../components/Header/Header";
 import Button from "../components/Button/Button";
 import { useLocation } from "react-router-dom";
 const stopWebcam = () => {
-  const streams = document.querySelectorAll('video').forEach((videoElement) => {
+  const streams = document.querySelectorAll("video").forEach((videoElement) => {
     if (videoElement.srcObject) {
       const tracks = (videoElement.srcObject as MediaStream).getTracks();
       tracks.forEach((track) => track.stop());
@@ -32,12 +32,12 @@ const CameraPage: React.FC = () => {
   const location = useLocation<LocationState>();
   const { testMode, eyeToExamine } = location.state || {};
   const history = useHistory();
-useEffect(() => {
-  // This will be called when the component unmounts
-  return () => {
-    stopWebcam();
-  };
-}, []);
+  useEffect(() => {
+    // This will be called when the component unmounts
+    return () => {
+      stopWebcam();
+    };
+  }, []);
   const continueToExam = () => {
     console.log("Test Mode:", testMode, "Eye to Examine:", eyeToExamine);
     stopWebcam();

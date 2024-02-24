@@ -11,7 +11,7 @@ import {
 
 import React from "react";
 import IonIcon from "@reacticons/ionicons";
-import "../styles/home.css";
+import "../styles/home/home.css";
 import WelcomePage from "../components/Welcome/WelcomePage";
 import Header from "../components/Header/Header";
 import { useHistory } from "react-router";
