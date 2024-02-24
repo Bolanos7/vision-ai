@@ -11,7 +11,7 @@ import {
 
 import React from "react";
 import IonIcon from "@reacticons/ionicons";
-import "./Home.css";
+import "../styles/home.css";
 import WelcomePage from "../components/Welcome/WelcomePage";
 import Header from "../components/Header/Header";
 import { useHistory } from "react-router";
@@ -32,7 +32,7 @@ const Home: React.FC = () => {
         <h1 className="welcome-title">Welcome to the Vision AI App</h1>
 
         <p className="app-description">
-          An Artificial Intelligence Based Near Vision Tester. <br /> Providing
+          A Artificial Intelligence Based Near Vision Tester. <br /> Providing
           accurate and reliable at home vision testing.
         </p>
         <Button buttonText="Continue" onClickAction={goToTermsPage} />
