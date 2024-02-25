@@ -19,14 +19,14 @@ import {
 } from "@ionic/react";
 import { eyeOutline } from "ionicons/icons";
 import { useHistory } from "react-router-dom";
-import Header from "../components/Header/Header";
-import Button from "../components/Button/Button";
-import Results from "./Results";
+import Header from "../../components/Header/Header";
+import Button from "../../components/Button/Button";
+import Results from "../results/Results";
 import "./TestConfig.css";
 
 const TestConfig: React.FC = () => {
   const history = useHistory();
-  const [showDatePicker, setShowDatePicker] = useState(false); 
+  const [showDatePicker, setShowDatePicker] = useState(false);
   const [testMode, setTestMode] = useState("");
   // const [wearGlasses, setWearGlasses] = useState<string>("");
   const [eyeToExamine, setEyeToExamine] = useState<string>("");
@@ -45,14 +45,14 @@ const TestConfig: React.FC = () => {
     // <IonPage id="container">
 
     <IonPage>
-      <Header headerText="Personal Configuration"/>
+      <Header headerText="Personal Configuration" />
       <IonContent scrollY={false}>
-      <IonItem>
+        <IonItem>
           <IonLabel position="stacked">
             <h1 className="question">Letters or Shapes?</h1>
           </IonLabel>
           <IonSelect
-            label = "Letters or Shapes?"
+            label="Letters or Shapes?"
             value={testMode}
             placeholder="Select Letters or Shapes"
             onIonChange={(e) => setTestMode(e.detail.value)}
@@ -123,7 +123,6 @@ const TestConfig: React.FC = () => {
           buttons={["OK"]}
         />
       </IonContent>
-      
     </IonPage>
   );
 };

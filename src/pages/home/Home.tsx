@@ -1,22 +1,8 @@
-import {
-  IonCard,
-  IonCardContent,
-  IonContent,
-  IonHeader,
-  IonPage,
-  IonText,
-  IonTitle,
-  IonToolbar,
-} from "@ionic/react";
-
+import { IonContent, IonPage } from "@ionic/react";
 import React from "react";
-import IonIcon from "@reacticons/ionicons";
-import "../styles/home/home.css";
-import WelcomePage from "../components/Welcome/WelcomePage";
-import Header from "../components/Header/Header";
+import "./Home.css";
 import { useHistory } from "react-router";
-import Button from "../components/Button/Button";
-import Frame from "../components/Frame";
+import Button from "../../components/Button/Button";
 
 const Home: React.FC = () => {
   const history = useHistory();
@@ -27,7 +13,6 @@ const Home: React.FC = () => {
 
   return (
     <IonPage>
-      {/* <Header headerText="Vision Test" /> */}
       <IonContent className="ion-padding" scrollY={false}>
         <h1 className="welcome-title">Welcome to the Vision AI App</h1>
 

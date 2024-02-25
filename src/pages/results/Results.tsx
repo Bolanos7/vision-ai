@@ -1,13 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-import {
-  IonContent,
-  IonPage,
-  IonButton,
-  IonText,
-  IonIcon,
-} from "@ionic/react";
-import Header from "../components/Header/Header";
+import { IonContent, IonPage, IonButton, IonText, IonIcon } from "@ionic/react";
+import Header from "../../components/Header/Header";
 import { eyeOutline } from "ionicons/icons";
 import { useLocation } from "react-router-dom";
 import html2canvas from "html2canvas";
@@ -31,21 +25,21 @@ const Results: React.FC = () => {
       if (content) {
         const canvas = await html2canvas(content);
         const imageData = canvas.toDataURL("image/png");
-        console.log('Screenshot taken', imageData);
+        console.log("Screenshot taken", imageData);
 
         // Set the screenshot data in the state
         setScreenshotData(imageData);
 
         // Save the screenshot
-        const link = document.createElement('a');
+        const link = document.createElement("a");
         link.href = imageData;
-        link.download = 'screenshot.png';
+        link.download = "screenshot.png";
         link.click();
       } else {
         console.error("Screenshot content not found");
       }
     } catch (e) {
-      console.error('Error taking or saving screenshot', e);
+      console.error("Error taking or saving screenshot", e);
     }
   };
 
@@ -62,11 +56,15 @@ const Results: React.FC = () => {
           <div className="result-button-container">
             <button className="result-button" onClick={takeAndSaveScreenshot}>
               <h1>Save as Image</h1>
-              <IonIcon className="eye" slot="end" size="large" icon={eyeOutline}></IonIcon>
+              <IonIcon
+                className="eye"
+                slot="end"
+                size="large"
+                icon={eyeOutline}
+              ></IonIcon>
             </button>
           </div>
         </div>
-       
       </IonContent>
     </IonPage>
   );

@@ -1,18 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { IonPage, IonButton, IonIcon, IonContent } from "@ionic/react";
-import { FaceMesh } from "@mediapipe/face_mesh";
-
-import { eyeOutline } from "ionicons/icons";
 import { useHistory } from "react-router-dom";
 
-import "./Terms.css";
-import PreTest from "../components/PreTest";
-import "../styles/home/home.css";
+import PreTest from "../../components/PreTest";
 import "./CameraPage.css";
-import "../components//PreTest.css";
 
-import Header from "../components/Header/Header";
-import Button from "../components/Button/Button";
+import Header from "../../components/Header/Header";
+import Button from "../../components/Button/Button";
 import { useLocation } from "react-router-dom";
 const stopWebcam = () => {
   const streams = document.querySelectorAll("video").forEach((videoElement) => {

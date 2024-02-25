@@ -8,9 +8,9 @@ import {
 } from "@ionic/react";
 import { eyeOutline } from "ionicons/icons";
 import { useHistory } from "react-router-dom";
-import Header from "../components/Header/Header";
+import Header from "../../components/Header/Header";
 import "./Terms.css";
-import Button from "../components/Button/Button";
+import Button from "../../components/Button/Button";
 
 const Terms: React.FC = () => {
   const history = useHistory();
