@@ -1,4 +1,11 @@
-import { IonContent, IonPage } from "@ionic/react";
+import {
+  IonContent,
+  IonFooter,
+  IonHeader,
+  IonPage,
+  IonTitle,
+  IonToolbar,
+} from "@ionic/react";
 import React from "react";
 import "./Home.css";
 import { useHistory } from "react-router";
@@ -12,8 +19,13 @@ const Home: React.FC = () => {
   };
 
   return (
-    <IonPage>
-      <IonContent className="ion-padding" scrollY={false}>
+    <IonPage className="container">
+      <IonHeader>
+        <IonToolbar>
+          <IonTitle className="header-title">Vision AI</IonTitle>
+        </IonToolbar>
+      </IonHeader>
+      <IonContent className="ion-padding">
         <h1 className="welcome-title">Welcome to the Vision AI App</h1>
 
         <p className="app-description">
@@ -22,6 +34,11 @@ const Home: React.FC = () => {
         </p>
         <Button buttonText="Continue" onClickAction={goToTermsPage} />
       </IonContent>
+      <IonFooter>
+        <IonToolbar>
+          <IonTitle className="footer-title">Version 1.0</IonTitle>
+        </IonToolbar>
+      </IonFooter>
     </IonPage>
   );
 };
